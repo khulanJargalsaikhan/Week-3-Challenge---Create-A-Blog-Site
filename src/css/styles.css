@@ -1,0 +1,37 @@
+body {
+    background: url(../images/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.nav, .nav-link{
+    background-color: black ;
+    color: lightgray;
+}
+.heading {
+    margin: auto;
+}
+.blog {
+    background-color: #E1E8EB;
+    margin: 2rem auto;
+}
+
+h1, h2, h3 {
+    padding-top: 3rem;
+}
+
+h4, h5, h6 {
+
+}
+
+
+.source{
+    text-align: right;
+}
+
+.between-card{
+    margin: 5rem;
+    border-color: white;
+}

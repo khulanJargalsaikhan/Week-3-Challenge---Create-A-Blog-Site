@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blog1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<!--Nav Bar-->
+<div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="about.html">About the Bootcamp</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="authors.html">Blog Authors</a>
+        </li>
+    </ul>
+
+</div>
+
+
+<!--content of blog 1-->
+<div class="container">
+    <div class="row">
+        <h2>Encapsulation</h2>
+
+        <p><i>23 July 2021</i></p>
+
+        <p>Sometimes your class has some internal business to attend to.</p>
+        <p>For example, your class may contains a method called save which takes as its argument the filename.</p>
+        <p>The class exposes (makes available) the save method.</p>
+        <p>Once the user of your class calls the save method your class still has work to do.
+            It must determine if the file exists. If the file doesn't exist then your class must create it on the disk.
+            Then write the data. Finally, close the connection to the file.</p>
+        <p>Encapsulation ensures that the user only knows about the save method and not every
+            little detail required to make the save method work.</p>
+
+
+        <h5>Public, Private and Protected, oh my!</h5>
+        <p>Getters/setters only allow private member variables to expose their data IF you want them to expose their data.
+            A variable not exposed via a getter or setter is effectively hidden
+            (unless it's declared public which isn't recommended). It may be used only by the class.
+            If you want that variable to be visible only to your class then declare it as private.
+            If you want it to be visible only to the class and any future subclasses then declare it as protected.
+            In any event the user has no idea it exists. It's secret to my class (and possibly subclasses).</p>
+
+        <p>A variable can have an access modifier</p>
+        <p><b>Public</b> - visible to any class in your program</p>
+        <p><b>Private</b> - visible only to your class (not sub classes)</p>
+        <p><b>Protected</b> - visible to your class and any subclasses (also visible to any classes in the same package)</p>
+        <p>You could also have a variable that has only a getter. That would be a read-only variable.
+            or you could have a variable with only a setter. That would be a write-only variable (not common though).</p>
+
+        <p>You could also have private variables like counters and things that only you class uses and nobody else uses.
+            Since there would be no getters/setters for those variables they would be private to the class.
+            Unless you declared them as protected. Then they would be visible to the class and subclasses.</p>
+
+
+
+        <p class="source"><i><a>Source: Montgomery College Java Bootcamp (canvas)</a></i></p>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
