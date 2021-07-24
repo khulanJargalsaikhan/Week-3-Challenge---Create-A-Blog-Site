@@ -28,41 +28,57 @@
 <!--content of blog 1-->
 <div class="container">
     <div class="row">
-        <h2>Introduction to Java</h2>
+        <h2>Overrides</h2>
 
         <p><i>23 July 2021</i></p>
 
-        <h5>Lecture Notes</h5>
-        <p>Java is a programming language developed at Sun Microsystems in 1995 by James Gosling.</p>
-        <p>There are several editions of Java; the latest is version 8 (referred to as 1.8). These editions are categorized into Standard (SE), Enterprise (EE), and Mobile (ME).</p>
-        <p>Java is considered a write once, run anywherelanguage, because the same code can be executed on different operating systems.</p>
+        <p>Overriding in Java. In any object-oriented programming language, Overriding is a feature that
+            allows a subclass or child class to provide a specific implementation of a method that is
+            already provided by one of its super-classes or parent classes.</p>
+        <p>A method in the child class, such as fly in the example below, does not need to be overridden
+            because it does not exist in the parent class. However, the sleep method exists in the parent
+            class but it does something different (in this case returns a different string). Since the sleep
+            method exists in the parent class the sleep method is overridden using the annotation @Override.</p>
+        <p>Override is not the same as overload. </p>
+        <h5>Override example</h5>
+        <p>Parent Class:</p>
+        <pre>
+            <code>
+                public class Animal {
+                    private String animalName;
+                    //public methods are visible to the calling class (ie.. Main)
+                    public String sleep() {
+                        return "An animal sleeps...";
+                    }
+                    public String eat() {
+                        return "An animal eats...";
+                    }
+                }
+            </code>
+        </pre>
+        <p>Child Class:</p>
+        <pre>
+            <code>
+                // we can extend a class into a more specific type
+                // by using the keyword: extends
+                public class Bird extends Animal {
 
-        <h5>Common features of Java</h5>
-        <ul>
-            <li>object-oriented</li>
-            <li>platform independent</li>
-            <li>simple; easy to learn</li>
-            <li>secure</li>
-            <li>architectural-neutral</li>
-            <li>portable</li>
-            <li>robust</li>
-            <li>multi-threaded</li>
-            <li>interpreted</li>
-            <li>high performance</li>
-            <li>distributed</li>
-            <li>dynamic</li>
-        </ul>
+                    //we can add methods specific to our Bird class
+                    public String fly(){
+                        return "The bird is flying";
+                    }
 
-        <h5>Short History of Java</h5>
-        <ul>
-            <li>1991: initiated by James Gosling</li>
-            <li>1995: initial release</li>
-            <li>1998: Java 2 (J2SE) released</li>
-            <li>2006: Java released as open-source</li>
-            J2SE, J2EE, J2ME and others renamed as JSE, JEE and JME
-            <li>2009-2010: Oracle acquires Sun (and Java)</li>
-        </ul>
-        <p class="source"><i><a href="https://app.revature.com/login">Source: https://app.revature.com</a></i></p>
+                    //we can override methods from the parent class
+                    @Override
+                    public String sleep(){
+                        return "The bird is sleeping";
+                    }
+                }
+            </code>
+        </pre>
+
+
+        <p class="source"><i><a>Source: Montgomery College Java Bootcamp (canvas)</a></i></p>
     </div>
 
 
